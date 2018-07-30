@@ -1,6 +1,6 @@
 ﻿namespace ProgBases_MDIPr
 {
-    partial class Form2
+    partial class Form3
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,29 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // listBox1
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 28);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 425);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(0, 28);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(332, 325);
+            this.listBox1.TabIndex = 2;
             // 
-            // Form2
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(782, 453);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(332, 353);
+            this.Controls.Add(this.listBox1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.IsMdiContainer = false;
-            this.Location = new System.Drawing.Point(0, 0);
+            this.Location = new System.Drawing.Point(1180, 0);
             this.MainMenuStrip = null;
-            this.Name = "Form2";
+            this.Name = "Form3";
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
-            this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.listBox1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,7 +60,6 @@
 
         #endregion
 
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
