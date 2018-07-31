@@ -196,5 +196,83 @@ namespace ProgBases_MDIPr
             }
 
         }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form activeChild = this.ActiveMdiChild;
+            if (activeChild != null)
+            {
+                foreach (Control c in activeChild.Controls)
+                {
+
+                    if (c.Name == "flowLayoutPanel1")
+                    {
+                        foreach (Control con in c.Controls)
+                        {
+                            if (con.Focus() == true)
+                            {
+                                Clipboard.SetDataObject(con.Text);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form activeChild = this.ActiveMdiChild;
+            if (activeChild != null)
+            {
+                foreach (Control c in activeChild.Controls)
+                {
+
+                    if (c.Name == "flowLayoutPanel1")
+                    {
+                        foreach (Control con in c.Controls)
+                        {
+                            if (con.Focus() == true)
+                            {
+                                Clipboard.SetDataObject(con.Text);
+                                con.Text = "";
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form activeChild = this.ActiveMdiChild;
+            if (activeChild != null)
+            {
+                foreach (Control c in activeChild.Controls)
+                {
+
+                    if (c.Name == "flowLayoutPanel1")
+                    {
+                        foreach (Control con in c.Controls)
+                        {
+                            if (con.Focus() == true)
+                            {
+                                IDataObject iData = Clipboard.GetDataObject();
+
+                                // Determines whether the data is in a format you can use.
+                                if (iData.GetDataPresent(DataFormats.Text))
+                                {
+                                    // Yes it is, so display it in a text box.
+                                    con.Text += (String)iData.GetData(DataFormats.Text);
+                                }
+                                
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
     }
 }

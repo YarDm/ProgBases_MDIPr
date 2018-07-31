@@ -42,12 +42,14 @@
             // 
             // Form2
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.flowLayoutPanel1);
             this.IsMdiContainer = false;
             this.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip = null;
+            this.MinimizeBox = false;
             this.Name = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);

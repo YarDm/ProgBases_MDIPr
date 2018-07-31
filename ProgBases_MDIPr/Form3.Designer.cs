@@ -46,7 +46,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(332, 353);
             this.Controls.Add(this.listBox1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.IsMdiContainer = false;
             this.Location = new System.Drawing.Point(1180, 0);
             this.MainMenuStrip = null;
